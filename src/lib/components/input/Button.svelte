@@ -5,4 +5,4 @@
     export let size: string = "150px";
 </script>
 
-<button type="button" class="btn {color} m-2" style="width: {size}; color: {textColor};">{name}</button>
+<button type="submit" class="btn {color} m-2" style="width: {size}; color: {textColor};" on:click>{name}</button>

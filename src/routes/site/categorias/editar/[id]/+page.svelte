@@ -4,7 +4,7 @@
 </script>
 
 <div class="bg-secondary rounded h-100 p-4">
-    <h6 class="mb-4">Cadastro de Categoria</h6>
+    <h6 class="mb-4">Edição de Categoria</h6>
 
     <form class="form">
         <div class="mb-3">
@@ -29,5 +29,9 @@
         display: flex;
         flex-direction: row;
         justify-content: end;
+    }
+
+    .btn {
+        width: 150px;
     }
 </style>
