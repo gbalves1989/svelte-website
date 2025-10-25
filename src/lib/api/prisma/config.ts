@@ -1,22 +1,10 @@
-import { PrismaClient } from "@prisma/client";
-import dotenv from "dotenv";
+import { PrismaClient } from '@prisma/client';
+import { NODE_ENV } from '$lib/api/constants/variables';
 
 let prisma: PrismaClient;
 
-dotenv.config({
-  path: process.env.NODE_ENV === "production" ? "env.production" : ".env.development"
-})
-
-if (process.env.NODE_ENV === "production") {
-  prisma = new PrismaClient();
-} else {
-  if (!(global as any).prisma) {
-    (global as any).prisma = new PrismaClient({
-      log: ['query', 'warn', 'error'],
-    });
-  }
-
-  prisma = (global as any).prisma;
+if (NODE_ENV === 'production') {
+	prisma = new PrismaClient();
 }
 
 export { prisma };

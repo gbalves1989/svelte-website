@@ -6,7 +6,7 @@
 	"plugins": ["prettier-plugin-svelte"],
 	"overrides": [
 		{
-			"files": "*.svelte",
+			"files": "*.svelte, *.ts",
 			"options": {
 				"parser": "svelte"
 			}
